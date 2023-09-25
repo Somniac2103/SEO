@@ -1,0 +1,62 @@
+SEO Fundamentals
+
+Two sub categories of SEO
+Off Page: Niche of website, outside links pointing to website, qualtity content, etc.
+On-page: Aspects that can be implemented directly by you.
+
+---On page SEO---
+1. Title: Try and put keywords in title, make title catchy and easy to read, Keep title tags between 50 to 60 char in length.
+<title> </title>
+
+2.Description: should be unique and contain keyword and should be under 156 char in length.
+<meta name='description' content="Actual description here">
+
+3.URL:url needs to explain what is the website about, it needs to be easy to understand and tell search engines and  humans what the page is about. URL should be under 115 characters but shorter the better.
+
+Example: 
+https://johndoesblog.com/blog/fdsafdsaf (bad)
+https://johndoesblog.com/blog/article title (good)
+
+4.Other Meta tags:meta keywords attribute- a series of keywords you deem relevant to the page in question.
+<meta name="keywords" content="put, keywords, here, with, common, seperate">
+
+meta viewport- gives the browser instructions on how to control the page dimensions and scaling.
+<meta name="viewport" content= "width=device-width, intiatial-scale =1.0">
+
+meta charset- defines a chracter set 
+
+meta author -defines the author of a page
+<meta name="author" content="John Doe">
+
+5.Favicon
+Improves user experience.
+Easier to find website by icons 
+remember to name it favicon icons
+<link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+
+6.Images
+must compress it. the website must be fast.
+remember to add width and height of image for layout
+
+7.Attributes
+Alt tags hlp search engines determine what the picture is about.
+<img alt=""/>
+add title tags 
+<a href="https://google.com" title="Google">Google</a>
+
+8.Mobile friendly
+media queries in css files 
+
+9. minify and compress
+can help save off time loading website.
+
+10. Keyword usage
+keyword should appear in title meat description and headings.
+Also placing keyword in headings, subheading and try and squeeze it into opening paragraphs
+
+
+
+
+
+
+
