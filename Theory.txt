@@ -146,5 +146,95 @@ Best Technical SEO Practices
 -Compress images.
 3. Do your best to stay on top of around 50 potential seo errors. Run schedule audits on your site 
 
+----------TECHNICAL SEO FOR DEVELOPERS----------
+
+-----1. User experience-----
+
+1.1 Core Web Vitals
+1.1.1 Largest Contentful Paint(LCP)- Largest thing loaded
+1.1.2 First Input Delay (FID)- Time from load to being interactive.
+1.1.3 Cumulative Layout Shift (CLS) - How much does the page shift around while loading.
+
+1.2 Optimise Images
+*Affects LCP
+-Responsive images for different screen sizes
+-Use most modern format for the browsers can user (webp and avif)
+- Use lowest resolutions as possible for screen sizesrcset = " small-image.png 300w, medium-image.png 600w, large-image.png 1200w"
+-Lazyload offscreen images always
+-set height and width for images *CLS 
+-compress image lossly if quality is not important and lossless if quality is important.
+*Use a tool to optimise images.
+
+1.3 Accessbility
+- Alt text on images
+- semantics elements
+
+1.4 Mobile responsiveness
+-Mobile First
+- Viewport meta tag: <meta name="viewport" content="width=device-width, initial-scale=1" />
+-readability font for all devices
+
+1.5 Reduce Javascript as far as possible
+-check bundler pack size 
+-check pixels and tracker tag
+-do not require JS for critical functionality
+-Prerender aka server side rednering website
+
+1.6 Clean URL structure
+-USe short, descriptive , keyword URL
+
+-----2. Meta Data-----
+
+2.1 Title and Description
+<title> </title>
+<meta name="description" content=" seo description"/>
+must must be unqie for each page and post.
+
+2.2 XML Sitemap
+
+2.3 Structure Data
+schema.org 
+
+2.4 Canonical tags
+Duplicate pages so tell google which page is the main one.
+<html>
+<head>
+<title> Explore the world of dresse </title>
+<link rel=:"canonical" href="https://example.om/dreeses/green-dresses"/>
+<!-- other elements -->
+</head>
+<!-- rest of the HTML-->
+
+2.5 Open Graph Meta tags
+indirectly helps SEO
+Social media meta data 
+for backlinks...
+
+-----3. Admin-----
+
+3.1 SSL Certificate
+letsusencrypt.org
+
+3.2 Manage Redirects
+
+3.3 Useful 404 page
+
+3.4 Have Robots.txt 
+
+User-agent: Googlebot
+Disallow: /noggoglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml
+
+3.5 Site audits
+Core vitals - Lighthouse
+Google search console
+
+
+
+
 
 
