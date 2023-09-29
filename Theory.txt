@@ -151,9 +151,90 @@ Best Technical SEO Practices
 -----1. User experience-----
 
 1.1 Core Web Vitals
+-Core pass mark works on the 75% percentile  so more than 3/4
+-Device types are measure seperately. However, google works on the mobile first as indexing.
+
 1.1.1 Largest Contentful Paint(LCP)- Largest thing loaded
+-Visual load
+-Is the largest element loaded in the viewport
+-Recommended target LCP load within 2 (good) to 4 Needs improvement sec.
+-check at the bottom to see what is the LCP element.
+-4 most common causes:
+ 1. Slow server responses
+ 2. Render-blocking javascript and css
+ 3. Slow resource load times
+ 4. Client-side rendering
+
+-Optimizing the rendering process:
+ Images
+ 1. Lazyload
+ 2. Compress
+ 3. Preloading (Tells browsers what you want to load first)
+
+ *If you don't use image CDN must save multiple copies at different resolutions.
+ <img src="small.jpg" srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 1500w" alt="…">
+
+ Preload tag informs browser about critical resource asap before their are discovered by HTML.
+<link rel="preload" as="image" href="important.png">
+
+Repsonsive images + Preload
+In header: 
+<link rel="preload" as="image" href="wolf.jpg" imagesrcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w" imagesizes="50vw">
+In body:
+<img src="wolf.jpg" srcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w" sizes="50vw" alt="A rad wolf">
+
+Preloading background images using image-set:
+*can set in CSS
+background-image: image-set( "cat.png" 1x, "cat-2x.png" 2x);
+<link rel="preload" as="image" imagesrcset="cat.png 1x, cat-2x.png 2x">
+
+
+ CSS
+ 1. Minification
+ 2. inline your critical CSS for above the fold content.
+  ->Website font
+  ->ViewPort settings
+  ->Background color
+  ->H1 style
+ 3. Remove unused CSS (Devtool command) and defer non-critical CSS
+
+ JS 
+ 1. Minify (But check it doesn't break)
+ 2. Remove non-critical JS
+ 3. Defer or asynchronously load JS
+  -> <script defer src="js" </script> *all non critical js
+  -> <script async src="js" </script> *for content needed earlier in page
+
 1.1.2 First Input Delay (FID)- Time from load to being interactive.
+-Interactivity
+-Recommended speed for FID is Less than 100ms good then needs improvement from 100ms to 300ms
+
+Types of interactions:
+-Clicking a link or a button
+-Inputting text into a blank friend
+-Selecting a drop-down menu
+
+Common cause for long FID is heavy javascript usage.
+FID Optimisation:
+1. Break up long tasks
+2. Optimize your page for interaction readiness
+3. USe a web worker
+4. Reduce Javascript execution time
+
 1.1.3 Cumulative Layout Shift (CLS) - How much does the page shift around while loading.
+-Visual stability
+-Recommended CLS is 0.1(good) to 0.25(needs improvement)
+- Most common causes of CLS
+ 1. Images without dimensions
+ 2. Ads,embeds and iframes without dimensions
+ 3. Dynamically injected content
+ 4. Fonts or styles applied too late in the code
+
+Images:
+  -Add Height and width Attributes or use CSS aspect ratio boxes
+For ads, embeds and iframes:
+  -Define height and width attributes for element 
+
 
 1.2 Optimise Images
 *Affects LCP
@@ -233,7 +314,15 @@ Sitemap: https://www.example.com/sitemap.xml
 Core vitals - Lighthouse
 Google search console
 
+-------------------SEO Technical Auditing -------------------------
 
+1. Check URL redirect
+- check HTTP and https
+- check with and without the WWW.
+
+type site:centralparktutos.com inurl:www *should have no resolutions
+type site:centralparktutos.com -inurl: https *should have no resolutions.
+type site:centralparktutos.com inurl: https *should have no resolutions.
 
 
 
