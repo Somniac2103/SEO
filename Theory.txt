@@ -324,6 +324,72 @@ type site:centralparktutos.com inurl:www *should have no resolutions
 type site:centralparktutos.com -inurl: https *should have no resolutions.
 type site:centralparktutos.com inurl: https *should have no resolutions.
 
+Tools for Audit:
+Google analytics
+Google search console
+Pagespeed insights
+Google data structure tool
+AHREF Tools
+Copyscrape
+SERP simulator
+Web page ord counter
+
+1. Check that all version goes to the same page. Check conanical 
+Check if the  webpage redicect to HTTPS vesion if http,http://www, https://www .
+
+2. Crawl the site
+ Use Aref Site Audit.
+ 2.1. Check HTML errors
+ 2.2. Content Quality report to check if duplicate content on own website. To check internet, copy website url into Copyscape.
+ 2.3. Low word count problem
+
+3. Check if site is index by Google
+type in google searchbar "site:websitename.com"
+check number page results equal to the amount of pages that is on the website.
+if you don't know how many pages on your website go to ahref audit and check the internal pages.
+
+4. Check if site is ranking for its keyword
+Type site name with keyword and check if it is ranking
+
+5. Check some on page SEO on main/important(most visited) pages
+
+R-click => view page source.
+
+5.1 Check title tag
+-copy title into serp simulator(serpsim) to check length
+-copy keywords into Ahref keywords explorer
+
+5.2 Check meta description
+-copy into serp simulator to check length.
+
+5.3 Check H1
+-Check if there is only one
+-Keywords is sprinkled in.
+
+6. Check site speed 
+Can use Google Pagespeed insights, GTMatrix 
+In Ahref siteaudit under performance.
+
+7. Check Structure data issues
+Use google Data Testing Tools
+
+8. Organic traffic analysis
+-use google analytics => check acquisition tab => Click overview => check organic search? set past 30 days
+-then check landing pages for which pages brings in the most visit
+use the last 12 months for a trend.
+
+9. Backlink page analysis
+-Check ahref audit refering domains backlinks report if it is going up.
+-Check ahref audit refering domains if any dodgy looking pages are linking to mine.
+-check if any backlinks are linking to 404 pages
+-Check broken outbound links
+
+10. Content gap analysis
+put competitor name in for checking keywords
+
+
+
+
 
 
 
