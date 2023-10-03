@@ -188,6 +188,19 @@ Preloading background images using image-set:
 background-image: image-set( "cat.png" 1x, "cat-2x.png" 2x);
 <link rel="preload" as="image" imagesrcset="cat.png 1x, cat-2x.png 2x">
 
+Preconnect to required origins
+<link rel="preconnect">
+Preconnect or dns-prefetch
+<link rel="preconnect" href="https://example.com">
+*be careful as if you do not use the connection within 10 seconds the connection is severed and it is wasted resources.
+
+<link rel="preload"> *for general use
+<link rel="preconnect"> *for edge causes
+
+<link rel="dns-prefetch"> this handles dnslookup 
+<link rel="dns-prefetch" href="https://example.com" />.
+
+
 
  CSS
  1. Minification
@@ -386,6 +399,105 @@ use the last 12 months for a trend.
 
 10. Content gap analysis
 put competitor name in for checking keywords
+
+-----------------------WORDPRESS SEO Optimisation------------------
+
+1. Theme must be mobile responsive
+2. Avoid themes that are bloated with plugins or third party scripts
+3. www or no www - use which one has the higer Authority. New site it doesn't matter.
+4. Setup permalinks- Prefer post name *keep te name clean and short
+5. Use Yoast SEO plugins
+-5.1. setup sitemap however only select pages you want google to crawl
+6. On page SEO
+- 6.1. Title
+- 6.2. URL
+- 6.3. body
+- 6.4. Meta tags
+
+-------------------------Ecommerce-----------------------------
+-----Images-----
+- use source tag to provide the correct size image for device. hgt and width.
+- use best format i.e. webp...however some browser don't support certain format then you can dynamically provide most efficient format for browser.
+- The formats does change qualtity like Lossy(tradeoff between quality and size)while loseless only compress as far as quality remains.
+- Use compression on all images
+-Quality factor 0.75 is commonly used.
+-good cache policy for images
+-Use CDN
+-Correctly sequencing images: 
+1. Large hero image above the fold, 
+2. all smaller images above the fold, 
+3. images just off screen so when scrolling happends,
+4. lazy load everything else.
+* <img loading="lazy"...
+
+HTTP2 
+Push images to webssite that will be needed.
+
+-----Javascript -----
+Tip 1: Avoid JS file proliferation
+Avoid having too many JS files as overhead per file increase load time
+Keep request counts low and files sizes low
+Combine JS files and load syncronousliy 
+Use HTTP2 where possible. Bigger highway
+
+Tip 2: Avoid excessive DNS lookups
+Avoid loading too files from too many different sites.
+Try to hold a local copy of the files needed.
+Some popular libraries may already be in the user cache due to frequent use.
+
+Tip 3: Eliminate inefficient JS
+Too broad
+
+Tip 4: Eliminate unused Javascript
+Only load JS files that is needed for the page.
+Tree shaking to remove files not being used.
+
+Tip 5: CompressJS files
+Takes longer to process at client side however improves download speed which normally has a net benefit
+
+Tip 6: Set Appropriate cahce duration for JS code
+cache-control:max-age=604800
+Check serve assets with an efficient cache policy
+Insure that cache refreshes is done when needed.
+possible work around is providing library versions.
+and use js which has been used before.
+
+-----Mobile Friendly -----
+Use Reponsive web design
+
+Design for mobile index.
+
+make sure content doesn't spill off the viewing port
+Ensure text is large enough to read comfortably
+ensure users can zoom in on content if they want a closer lookingEnsure buttons icons are large enough to be easily recognizable
+
+Usability: 
+Make sure structure is not hard to use.
+Make sure the site is one had operable and interactive component easily clickable.
+Relaying too much on keyboard inputs.
+use mobile friendly test on search.google.com/test/mobility-friendly
+
+Peronalisation for mobile
+less real estate so better use of the space to perosnalized
+use cookies
+
+Utilized mobile input feature:
+pinch and swipe
+location services
+voice input 
+augmented reality
+images searches
+*can use JS to detect avaiable features and only support those.
+
+
+
+
+
+
+
+
+
+
 
 
 
