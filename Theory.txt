@@ -1,4 +1,4 @@
-SEO Fundamentals
+sSEO Fundamentals
 
 Two sub categories of SEO
 Off Page: Niche of website, outside links pointing to website, qualtity content, etc.
@@ -165,6 +165,28 @@ Best Technical SEO Practices
  3. Slow resource load times
  4. Client-side rendering
 
+-Trouble shoot we can use the:
+1. Slow servers
+-Minimize server logic
+-Always be cahcing pages than rebuilding them
+-Ensure all is cahched as long as practical
+2. Slow Network
+- Use CDN
+- use service workers (Workbox app)
+3. Slow Code
+- Reduce what is loaded above the fold
+- Put code inline put the JS CSS in the header. So it doesn't have to request, download, parse and then render it.
+- Use defer and async.
+-Use prefetch and preconnect.
+-preload. 
+<link rel="preload" href="style.css" as="style">
+<link rel="preload" href="main.js" as="script">
+<link rel="preload" href="hi.png" as "image">
+<link rel="preload" href="ehlo.mp4" as "video">
+<link rel="preload" href="cool.woff2" as "font" type="font/woff2">
+-images: compress, use attribute load=lazyload, use modern format.
+
+
 -Optimizing the rendering process:
  Images
  1. Lazyload
@@ -234,6 +256,16 @@ FID Optimisation:
 3. USe a web worker
 4. Reduce Javascript execution time
 
+Defer, delay or delete JS
+General any JS bigger than 200kB is too large.
+USe Code splitter.
+Defer : <script defer src="does-not-change-layout.js></script>, tells the browser that the code won't affect the layout of the page and can be loaded at the end.
+Async: <script async src="async-javascript.js"></script>, pretty much tells the browser to run script but without blocking any other script on the browser.
+Delete or exclude any software which isn't needed for page.
+See if any heavy components like UI code.
+Break up loing task as the browser will first download the whole file and then execute it. a long task is anything that takes longer than 15 millisec to complete.
+Can use timeout 
+
 1.1.3 Cumulative Layout Shift (CLS) - How much does the page shift around while loading.
 -Visual stability
 -Recommended CLS is 0.1(good) to 0.25(needs improvement)
@@ -298,6 +330,7 @@ Duplicate pages so tell google which page is the main one.
 <!-- other elements -->
 </head>
 <!-- rest of the HTML-->
+***Ensure Canoncial tags is linked to the HTTPS version
 
 2.5 Open Graph Meta tags
 indirectly helps SEO
@@ -346,6 +379,7 @@ AHREF Tools
 Copyscrape
 SERP simulator
 Web page ord counter
+use mobile friendly checker
 
 1. Check that all version goes to the same page. Check conanical 
 Check if the  webpage redicect to HTTPS vesion if http,http://www, https://www .
@@ -488,6 +522,45 @@ voice input
 augmented reality
 images searches
 *can use JS to detect avaiable features and only support those.
+
+----Search results Presentations----
+Tip1 : Review your title links
+  Extracted from the <title> tag
+  Don't duplicate titles
+  Don't put dynamic data in titles as google can take a few days to update it search results.
+  use site: page url to check googles 
+
+Tip2 : Include High quality images
+  key images should be at least 1200px wide
+  use site: url and use image
+  use robot.txt file to tell google how to use your images
+
+tip3 : Share rich product data
+  use structure markup
+  for products it is recommended to add the following attributes to structure markup:
+  Title, Description, Images, Ratings, Price, availability
+  use rich structure testing 
+    
+tip4 : Share price drop data
+  Google takes the average price over lifetime to determine if there is a price drop.
+  There must be a price in the structure and must be a range.
+
+tip5 : Indentify products you sell
+
+tip6 : Create a business profile
+
+----Google Merchant center----
+
+Main use to upload product data via merchant feeds
+Use both schema in markup and use google merchant feeds
+
+ tip1 - Ensure all products are indexed
+ tip2 - check if price is correct
+ Tip3 - Minimize price and availability lag
+ Tip4 - Ensure your products are eligible for rich product results
+ Tip5 - Share your product inventory data
+ Tip6 - Sign up for the shopping tab
+
 
 
 
